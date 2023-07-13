@@ -6,7 +6,7 @@ import IMessage from "@interfaces/message/IMessage";
 import IChat from "@interfaces/chat/IChat";
 import IUser from "@interfaces/user/IUser";
 
-export type ClientEventsMap = {
+export type BotEventsMap = {
   /** Conexão alterada */
   conn: { action: ConnectionType; isNewLogin?: boolean; qr?: string };
 

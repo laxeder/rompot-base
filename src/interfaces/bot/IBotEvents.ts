@@ -1,4 +1,4 @@
-import type { ClientEventsMap } from "../../types/bot/BotEventsMap";
+import type { BotEventsMap } from "../../types/bot/BotEventsMap";
 
 import { EventEmitter } from "events";
 
@@ -6,11 +6,11 @@ import { EventEmitter } from "events";
 export default interface IBotEvents {
   ev: EventEmitter;
 
-  on<T extends keyof ClientEventsMap>(eventName: T, listener: (arg: ClientEventsMap[T]) => void): void;
+  on<T extends keyof BotEventsMap>(eventName: T, listener: (arg: BotEventsMap[T]) => void): void;
 
-  off<T extends keyof ClientEventsMap>(eventName: T, listener: (arg: ClientEventsMap[T]) => void): void;
+  off<T extends keyof BotEventsMap>(eventName: T, listener: (arg: BotEventsMap[T]) => void): void;
 
-  removeAllListeners<T extends keyof ClientEventsMap>(event: T): void;
+  removeAllListeners<T extends keyof BotEventsMap>(event: T): void;
 
-  emit<T extends keyof ClientEventsMap>(eventName: T, arg: ClientEventsMap[T]): boolean;
+  emit<T extends keyof BotEventsMap>(eventName: T, arg: BotEventsMap[T]): boolean;
 }
