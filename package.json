@@ -1,0 +1,23 @@
+{
+  "name": "rompot-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npm i && npm run clean && tsc && tsc-alias",
+    "clean": "rimraf lib"
+  },
+  "keywords": [],
+  "author": "Laxeder",
+  "license": "MIT",
+  "dependencies": {
+    "events": "3.3.0"
+  },
+  "devDependencies": {
+    "@types/events": "3.0.0",
+    "@types/node": "20.4.2",
+    "rimraf": "5.0.1",
+    "tsc-alias": "1.8.7",
+    "typescript": "5.1.6"
+  }
+}
