@@ -47,6 +47,12 @@ export default interface IClient extends IClientEvents {
   //! ========== COMANDO
   //! =================================================================
 
+  /** @returns Controlador de comando do cliente */
+  getCommandController(): ICommandController;
+
+  /** Define o controlador de comando do cliente */
+  setCommandController(controller: ICommandController): void;
+
   /** Define os comandos do bot
    * @param commands Comandos que será injetado
    */
