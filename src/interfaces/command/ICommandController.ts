@@ -44,11 +44,13 @@ export default interface ICommandController extends ICommandControllerEvent {
 
   /** Executa o comando
    * @param message Mensagem que chamou o comando
+   * @param command Comando que será executado
    */
-  execCommand(message: IMessage): any;
+  execCommand(message: IMessage, command: ICommand): any;
 
   /** Resposta ao comando
    * @param message Mensagem que chamou o comando
+   * @param command Comando que receberá a resposta
    */
-  replyCommand(message: IMessage): any;
+  replyCommand(message: IMessage, command: ICommand): any;
 }
