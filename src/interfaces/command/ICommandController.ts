@@ -2,10 +2,11 @@ import IMessage from "@interfaces/message/IMessage";
 
 import ICommandControllerConfig from "./ICommandControllerConfig";
 import ICommandControllerEvent from "./ICommandControllerEvent";
+import IClientModule from "../client/IClientModule";
 import ICommand from "./ICommand";
 
 /** Interface do controlador de comandos */
-export default interface ICommandController extends ICommandControllerEvent {
+export default interface ICommandController extends ICommandControllerEvent, IClientModule {
   /** Configuração do controlador */
   config: ICommandControllerConfig;
   /** Comandos */
