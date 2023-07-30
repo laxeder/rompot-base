@@ -86,6 +86,13 @@ export default interface IClient extends IClientEvents {
    */
   connect(auth: IAuth | string): Promise<void>;
 
+  /**
+   * * Conectar bot por código
+   * @param number Número do bot
+   * @param auth Autenticação do bot
+   */
+  connectFromCode(number: number, auth: IAuth | string): Promise<string>;
+
   /** Reconectar bot
    * @param alert Alerta que está reconectando
    */
