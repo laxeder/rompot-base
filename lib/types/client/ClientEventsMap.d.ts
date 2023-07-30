@@ -25,6 +25,8 @@ export type ClientEventsMap = {
     close: {};
     /** QR code gerado */
     qr: string;
+    /** Código de autenticação gerado */
+    code: string;
     /** Evento do usuário */
     user: {
         action: UserAction;

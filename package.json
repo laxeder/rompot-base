@@ -1,6 +1,6 @@
 {
   "name": "rompot-base",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Base para a API Rompot",
   "main": "lib/index.js",
   "scripts": {

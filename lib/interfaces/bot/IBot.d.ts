@@ -15,10 +15,16 @@ export default interface IBot {
     status: BotStatus;
     /** Gerenciador de eventos */
     ev: IBotEvents;
-    /**vConectar bot
+    /** Conectar bot
      * @param auth Autenticação do bot
      */
     connect(auth: IAuth | string): Promise<void>;
+    /**
+     * * Conectar bot por código
+     * @param number Número do bot
+     * @param auth Autenticação do bot
+     */
+    connectFromCode(number: number, auth: IAuth | string): Promise<string>;
     /** Reconectar bot
      * @param alert Alerta que está reconectando
      */
